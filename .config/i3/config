@@ -192,7 +192,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $mode_power Power (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (s) shutdown
+set $mode_power Power (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (p) shutdown
 bindsym $mod+Shift+p mode "$mode_power"
 mode "$mode_power" {
     bindsym l mode "default", exec --no-startup-id $HOME/.config/i3/i3exit lock
@@ -200,7 +200,7 @@ mode "$mode_power" {
     bindsym s mode "default", exec --no-startup-id $HOME/.config/i3/i3exit suspend
     bindsym h mode "default", exec --no-startup-id $HOME/.config/i3/i3exit hibernate
     bindsym r mode "default", exec --no-startup-id $HOME/.config/i3/i3exit reboot
-    bindsym p mode "default", exec --no-startup-id $HOME/.config/ppi3/i3exit shutdown
+    bindsym p mode "default", exec --no-startup-id $HOME/.config/i3/i3exit shutdown
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
